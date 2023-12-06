@@ -1,0 +1,24 @@
+.main-div {
+    border: solid 4px black;
+    margin-right: 200px;
+    margin-left: 200px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 78px;
+    font-weight: 800;
+    margin-top: -50px;
+    background-color: #FFFCF3;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    &:hover {
+        color: #FF9900;
+        cursor: default;
+    }
+}
