@@ -1,0 +1,34 @@
+.logo {
+    position: relative;
+    font-size: 28px;
+    margin-left: 200px;
+    font-weight: 900;
+    font-family: 'Overpass', sans-serif;
+}
+
+.b {
+    position: absolute;
+    right: 14px;
+    top: 4px;
+}
+
+.b-hidden-placeholder {
+    color: #FFFCF3;
+}
+
+.slash-cream {
+    position: absolute;
+    color: #FFFCF3;
+    right: 24px;
+    transform: rotate(-16deg);
+    z-index: 1;
+    font-weight: 700;
+}
+
+.burger-menu {
+    margin-right: 200px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

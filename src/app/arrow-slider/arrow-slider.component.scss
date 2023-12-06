@@ -1,0 +1,45 @@
+.image-container {
+  position: relative;
+  width: 300px;
+}
+
+.second-image, .third-image {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.image-container.start-animation .first-image {
+  animation: fadeIn 100ms forwards;
+}
+
+.image-container.start-animation .second-image { 
+  animation: fadeIn 100ms forwards; 
+  animation-delay: 100ms;
+}
+
+.image-container.start-animation .third-image {
+  animation: stay 1s forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  5%, 99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes stay {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
