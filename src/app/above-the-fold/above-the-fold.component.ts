@@ -17,8 +17,7 @@ export class AboveTheFoldComponent implements OnInit{
       this.animation = true;
       setTimeout(() => {
         this.animation = false;
-       },900);
-    }, 1200);
-   
+       },1200);
+    }, 1400);
   }
 }

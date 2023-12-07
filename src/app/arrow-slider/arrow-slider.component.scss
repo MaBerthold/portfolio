@@ -1,4 +1,4 @@
-.image-container {
+.image-div1 {
   position: relative;
   width: 300px;
 }
@@ -9,16 +9,16 @@
     opacity: 0;
 }
 
-.image-container.start-animation .first-image {
+.image-div1.start-animation .first-image {
   animation: fadeIn 100ms forwards;
 }
 
-.image-container.start-animation .second-image { 
+.image-div1.start-animation .second-image { 
   animation: fadeIn 100ms forwards; 
   animation-delay: 100ms;
 }
 
-.image-container.start-animation .third-image {
+.image-div1.start-animation .third-image {
   animation: stay 1s forwards;
   animation-delay: 200ms;
 }

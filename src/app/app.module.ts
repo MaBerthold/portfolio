@@ -9,6 +9,7 @@ import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ArrowSliderComponent } from './arrow-slider/arrow-slider.component';
+import { ArrowSlider2Component } from './arrow-slider2/arrow-slider2.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ArrowSliderComponent } from './arrow-slider/arrow-slider.component';
     AboveTheFoldComponent,
     AboutMeComponent,
     SkillsComponent,
-    ArrowSliderComponent
+    ArrowSliderComponent,
+    ArrowSlider2Component
   ],
   imports: [
     BrowserModule,

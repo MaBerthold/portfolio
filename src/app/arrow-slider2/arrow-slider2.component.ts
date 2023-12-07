@@ -1,19 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-arrow-slider',
-  templateUrl: './arrow-slider.component.html',
-  styleUrl: './arrow-slider.component.scss'
+  selector: 'app-arrow-slider2',
+  templateUrl: './arrow-slider2.component.html',
+  styleUrl: './arrow-slider2.component.scss'
 })
-export class ArrowSliderComponent  {
+export class ArrowSlider2Component  {
   inViewport = true;
-
-  images = [
-    'assets/img/arrow-left1.png',
-    'assets/img/arrow-left2.png',
-    'assets/img/arrow-left3.png'
-  ];
-
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
@@ -21,7 +14,7 @@ export class ArrowSliderComponent  {
   }
 
   checkIfInViewport(): void {
-    const element = document.querySelector('.image-div1');
+    const element = document.querySelector('.image-div2');
   
     if (element) {
       const rect = element.getBoundingClientRect();

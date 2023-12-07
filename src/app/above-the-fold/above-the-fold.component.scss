@@ -83,32 +83,32 @@
 }
 
 .image-container.start-animation .first-image {
-  animation: fadeIn 150ms forwards;
+  animation: fadeIn 200ms forwards;
 }
 
 .image-container.start-animation .second-image {
-  animation: fadeIn 150ms forwards;
-  animation-delay: 150ms;
+  animation: fadeIn 200ms forwards;
+  animation-delay: 200ms;
 }
 
 .image-container.start-animation .third-image {
-  animation: fadeIn 150ms forwards;
-  animation-delay: 300ms;
+  animation: fadeIn 200ms forwards;
+  animation-delay: 400ms;
 }
 
 .image-container.start-animation .fourth-image {
-  animation: fadeIn 150ms forwards;
-  animation-delay: 450ms;
-}
-
-.image-container.start-animation .fivth-image {
-  animation: fadeIn 150ms forwards;
+  animation: fadeIn 200ms forwards;
   animation-delay: 600ms;
 }
 
+.image-container.start-animation .fivth-image {
+  animation: fadeIn 200ms forwards;
+  animation-delay: 800ms;
+}
+
 .image-container.start-animation .sixth-image {
-  animation: fadeIn 150ms forwards;
-  animation-delay: 750ms;
+  animation: fadeIn 200ms forwards;
+  animation-delay: 1000ms;
 }
 
 @keyframes fadeIn {
