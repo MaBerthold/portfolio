@@ -3,6 +3,7 @@
     border: solid 4px black;
     margin-right: 200px;
     margin-left: 200px;
+    margin-top: 20px;
 
     display: flex;
     justify-content: center;
@@ -44,4 +45,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        color: #FF9900;
+    }
 }

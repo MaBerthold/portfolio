@@ -6,7 +6,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './arrow-slider.component.scss'
 })
 export class ArrowSliderComponent  {
-  inViewport = true;
+  inViewport = false;
 
   images = [
     'assets/img/arrow-left1.png',

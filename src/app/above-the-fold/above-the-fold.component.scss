@@ -1,70 +1,126 @@
 .headline-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 128px;
-    font-weight: 800;
-    margin-top: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  font-weight: 800;
+  margin-top: 204px;
 }
 
 .seperator-and-name-div {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .seperator-headline {
-    height: 4px;
-    background-color: black;
-    width: 500px;
+  height: 4px;
+  background-color: black;
+  width: 500px;
 }
 
 .my-name-headline {
-    color: #FF9900;
-    font-size: 48px;
-    font-family: 'Overpass', sans-serif;
-    font-weight: 700;
+  color: #FF9900;
+  font-size: 48px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
 }
 
 .mail-and-scroll-line {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-right: 200px;
-    margin-left: 200px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .email-90deg-div {
-    position: relative;
-    margin-top: 200px;
-    height: 400px;
+  position: relative;
+  margin-top: 200px;
+  height: 400px;
 }
 
 .email-90deg {
-    font-size: 23px;
-    font-family: 'Overpass', sans-serif;
-    font-weight: 300;
-    position: absolute;
-    left: -135px;
-    transform: rotate(-90deg);
+  font-size: 23px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  left: -135px;
+  transform: rotate(-90deg);
 
-    &:hover{
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .scroll-down {
-    font-size: 23px;
-    position: absolute;
-    right: 0;
-    bottom: 233px;
+  position: relative;
+  font-size: 23px;
+  position: absolute;
+  right: 0;
+  bottom: 233px;
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: -200px;
+  left: -30px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.image-container.start-animation .first-image {
+  animation: fadeIn 150ms forwards;
+}
+
+.image-container.start-animation .second-image {
+  animation: fadeIn 150ms forwards;
+  animation-delay: 150ms;
+}
+
+.image-container.start-animation .third-image {
+  animation: fadeIn 150ms forwards;
+  animation-delay: 300ms;
+}
+
+.image-container.start-animation .fourth-image {
+  animation: fadeIn 150ms forwards;
+  animation-delay: 450ms;
+}
+
+.image-container.start-animation .fivth-image {
+  animation: fadeIn 150ms forwards;
+  animation-delay: 600ms;
+}
+
+.image-container.start-animation .sixth-image {
+  animation: fadeIn 150ms forwards;
+  animation-delay: 750ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
