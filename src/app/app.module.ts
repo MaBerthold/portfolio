@@ -10,6 +10,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ArrowSliderComponent } from './arrow-slider/arrow-slider.component';
 import { ArrowSlider2Component } from './arrow-slider2/arrow-slider2.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ArrowSlider2Component } from './arrow-slider2/arrow-slider2.component';
     AboutMeComponent,
     SkillsComponent,
     ArrowSliderComponent,
-    ArrowSlider2Component
+    ArrowSlider2Component,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

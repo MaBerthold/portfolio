@@ -49,4 +49,28 @@
     &:hover {
         color: #FF9900;
     }
+
+    &:hover img {
+        animation: turnIcon 350ms ease;
+    }
+}
+
+@keyframes turnIcon {
+    0% {
+        transform: scale(0.7) translateX(100%);
+
+    }
+
+    25% {
+        transform: scale(0.4) translatex(0);
+
+    }
+
+    75% {
+        transform: scale(0.7) translateX(-100%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0);
+    }
 }

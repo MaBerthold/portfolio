@@ -1,0 +1,56 @@
+<div class="portfolio-section">
+    <div class="portfolio-headline">
+        <div class="h2">Portfolio</div>
+        <span class="portfolio-introduction-txt">Hier sind ein paar Beispiele meiner bisherigen Projekte. Antesten
+            unbedingt empfohlen...</span>
+    </div>
+
+    <div class="project-div" (mouseenter)="showDescriptionRight = true" (mouseleave)="showDescriptionRight = false">
+        <div class="img-main-div">
+            <img class="img-portfolio" src="assets/img/join-screen.png" alt="join screen">
+            <div class="hidden-container left-frame right-circle">
+                <div class="circle-arrow-right circle"><img src="assets/img/animation-arrow-down.png" alt="arrow animation"></div>
+            </div>
+        </div>
+
+        <div class="project-description-div-right" *ngIf="showDescriptionRight">
+            <div class="project-description">
+                <span class="project-description-headline">Join</span>
+                <span class="project-description-subtitle">HTML | CSS | JavaScript | Git</span>
+                <span class="project-description-txt">Join ist ein Kanban-Projectmanagement Tool. Hier können Aufgaben
+                    erstellt und zugewiesen, im
+                    Board per Drag & Drop verschoben und neue Kontakte erstellt werden. Zudem gibt es eine Übersicht
+                    über alle Aufgaben.</span>
+                <div class="buttons">
+                    <div class="btn">Github</div>
+                </div>
+
+            </div>
+        </div>
+        <span class="project-number">01/02</span>
+
+    </div>
+
+    <div class="project-div" (mouseenter)="showDescriptionLeft = true" (mouseleave)="showDescriptionLeft = false">
+        <span class="project-number">02/02</span>
+
+        <div class="project-description-div-left" *ngIf="showDescriptionLeft">
+            <div class="project-description">
+                <span class="project-description-headline">El Pollo Loco</span>
+                <span class="project-description-subtitle">HTML | CSS | JavaScript | OOP</span>
+                <span class="project-description-txt">Ein lustige Jump'n run Game erstellt mit objektorientierter
+                    Programmierung. Spielbar auf dem PC
+                    oder mobilen Geräten.</span>
+                <div class="buttons">
+                    <div class="btn">Github</div>
+                </div>
+            </div>
+        </div>
+        <div class="img-main-div" >
+            <img class="img-portfolio" src="assets/img/el-pollo-loco1.jpg" alt="">
+            <div class="hidden-container right-frame">
+                <div class="circle-arrow-left circle"><img src="assets/img/animation-arrow-down.png" alt="arrow animation"></div>
+            </div>
+        </div>
+    </div>
+</div>
