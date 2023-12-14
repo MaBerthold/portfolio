@@ -4,4 +4,11 @@
     <span class="b-hidden-placeholder">B</span>
     <span class="b">B</span>]
 </span>
-<img src="assets/img/burger menu S3.png" alt="menu" class="burger-menu">
+
+<div class="burger-menu-div" (click)="openMenu()" [class.changed-menu]="menuOpen">
+    <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>

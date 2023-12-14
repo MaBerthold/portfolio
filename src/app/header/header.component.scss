@@ -25,10 +25,37 @@
     font-weight: 700;
 }
 
-.burger-menu {
-    margin-right: 200px;
+.burger-menu-div {
+    position: absolute;
+    right: 200px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 
     &:hover {
         cursor: pointer;
     }
+}
+
+.burger-menu-div.changed-menu .burger-menu {
+
+    .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 13px);
+    }
+
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-7px, -13px);
+    }
+}
+
+.bar {
+    width: 40px;
+    height: 4px;
+    background-color: #333;
+    margin: 10px 0;
+    transition: 0.4s;
 }
