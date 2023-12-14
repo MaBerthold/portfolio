@@ -1,12 +1,38 @@
+<div class="skew-div"></div>
+
 <div class="main-div">
+
     <span class="h2">Say Hi!</span>
 
-    <form class="form">
+    <form class="form" action="" method="post">
         <span class="headline-form">Sie haben Fragen?</span>
         <span class="subtitle-form">Bitte zögern Sie nicht, mir eine Nachricht zukommen zu lassen. Ich freue mich!</span>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea name="message" id="" cols="30" rows="10" placeholder="Nachricht"></textarea>
+        <div class="input-div">
+            <input type="text" placeholder="Name" name="name" [class.clicked-input]="clickedInputs[0]" (click)="onInputClick(0)"
+                (blur)="onInputBlur(0)" (input)="onInputChange($event, 0)" (focus)="onInputFocus(0)">
+            <img *ngIf="clickedInputs[0] || showCheckImage[0]" [src]="checkImageSource(0)" alt="Check Image" class="check-image">
+        </div>
+
+        <div class="input-div">
+            <input type="email" placeholder="Email" [class.clicked-input]="clickedInputs[1]" (click)="onInputClick(1)"
+                (blur)="onInputBlur(1) " (input)="onInputChange($event, 1)" (focus)="onInputFocus(1)">
+            <img *ngIf="clickedInputs[1] || showCheckImage[1]" [src]="checkImageSource(1)" alt="Check Image"
+                class="check-image">
+        </div>
+
+        <div class="input-div">
+            <textarea name="message" cols="30" rows="10" placeholder="Nachricht"
+                [class.clicked-input]="clickedInputs[2]" (click)="onInputClick(2)" (blur)="onInputBlur(2)"
+                (input)="onInputChange($event, 2)" (focus)="onInputFocus(2)"></textarea>
+            <img *ngIf="clickedInputs[2] || showCheckImage[2]" [src]="checkImageSource(2)" alt="Check Image"
+                class="check-image">
+        </div>
+
+        <div class="policy">
+            <img src="assets/img/check-btn.png" alt="checkbox">
+            <span>Ich habe die <span class="policy-span">Datenschutzerklärung</span> gelesen und stimme den Bedingungen zu.</span>
+        </div>
+        <div [class.btn]="btnEnabled" class="disabled" (click)="btnEnabled && sendMessage()">Senden</div>
     </form>
 
     <div class="subline">
@@ -22,8 +48,7 @@
 
         <div class="footer-right">
             <div class="arrow-up">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="assets/img/arrow-up.png" alt="">
             </div>
             <div class="social-icons">
                 <img src="assets/img/Github button s3.png" alt="github">

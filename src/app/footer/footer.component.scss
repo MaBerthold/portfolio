@@ -1,14 +1,25 @@
+.skew-div {
+    z-index: 1;
+
+    background-color: black;
+    height: 800px;
+    transform: skewY(8deg);
+    margin-bottom: -680px;
+}
+
 .main-div {
+    z-index: 5;
+    position: relative;
     background-color: black;
     color: white;
-    background: linear-gradient(to bottom right);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    font-family: 'Overpass', sans-serif;
 }
 
 .h2 {
     font-family: 'Syne', sans-serif;
     font-size: 78px;
     font-weight: 800;
+    margin-left: 200px;
 
     &:hover {
         color: #FF9900;
@@ -17,6 +28,7 @@
 }
 
 .form {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +39,6 @@
 
 .headline-form {
     color: #FF9900;
-    font-family: 'Overpass', sans-serif;
     font-size: 32px;
     font-weight: 700;
 }
@@ -35,7 +46,11 @@
 .subtitle-form {
     font-size: 23px;
     font-weight: 400;
-    font-family: 'Overpass', sans-serif;
+}
+
+.input-div {
+    width: 50%;
+    position: relative;
 }
 
 input,
@@ -44,10 +59,10 @@ textarea {
     color: white;
     border: 3px solid transparent;
     border-bottom: 1px solid white;
-    padding: 8px;
+    padding: 16px;
     outline: none;
     margin: 16px;
-    width: 50%;
+    width: 100%;
 
     &:hover {
         cursor: pointer;
@@ -62,6 +77,65 @@ textarea::placeholder {
     color: white;
 }
 
+.clicked-input {
+    border: 3px solid white !important;
+}
+
+.check-image {
+    position: absolute;
+    right: 8px;
+    top: 28px;
+}
+
+.policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.policy img {
+    &:hover {
+        background-color: #FF9900;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.policy-span {
+    color: #FF9900;
+    cursor: pointer;
+
+    &:hover {
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.disabled {
+    font-family: 'Overpass', sans-serif;
+    font-size: 23px;
+    color: gray;
+    border: solid 4px gray;
+    padding: 16px 48px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    color: white;
+    border: solid 4px white;
+    transition: padding 0.15s ease, font-weight 0.15s ease;
+
+    &:hover {
+        cursor: pointer;
+        padding: 16px 72px;
+        font-weight: 700;
+    }
+}
+
 .subline {
     display: flex;
     justify-content: space-between;
@@ -74,7 +148,6 @@ textarea::placeholder {
     position: relative;
     font-size: 28px;
     font-weight: 900;
-    font-family: 'Overpass', sans-serif;
 }
 
 .b {
@@ -96,8 +169,21 @@ textarea::placeholder {
     font-weight: 700;
 }
 
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.arrow-up {
+    margin-bottom: 32px;
+}
+
 .social-icons img {
     padding: 16px;
+    padding-left: 32px;
+    padding-right: 0;
 
     &:hover {
         cursor: pointer;
@@ -110,8 +196,17 @@ textarea::placeholder {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(-30%);
     }
 }
 
+.legal-notice {
+    font-family: 'Overpass', sans-serif;
+
+    &:hover {
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
