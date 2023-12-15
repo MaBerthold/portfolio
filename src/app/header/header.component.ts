@@ -14,14 +14,7 @@ export class HeaderComponent {
 
 
   openMenu() {
-    this.animationBurgerMenu();
-    console.log(this.menuOpen); 
-  }
-
-  animationBurgerMenu() {
     this.menuOpen = !this.menuOpen;
     (this.menuOpen) ? this.router.navigate(['/menu']) : this.router.navigate(['/']);
-  }
-  
-  
+  }  
 }

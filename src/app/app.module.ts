@@ -14,6 +14,8 @@ import { PortfolioComponent } from './main-content/portfolio/portfolio.component
 import { ArrowSlider3Component } from './main-content/arrow-slider3/arrow-slider3.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MainContentComponent } from './main-content/main-content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

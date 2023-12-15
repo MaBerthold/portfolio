@@ -4,35 +4,46 @@
 
     <span class="h2">Say Hi!</span>
 
-    <form class="form" action="" method="post">
+    <form class="form" (submit)="sendMessage()" #myForm>
         <span class="headline-form">Sie haben Fragen?</span>
-        <span class="subtitle-form">Bitte zögern Sie nicht, mir eine Nachricht zukommen zu lassen. Ich freue mich!</span>
+        <span class="subtitle-form">Bitte zögern Sie nicht, mir eine Nachricht zukommen zu lassen. Ich freue
+            mich!</span>
         <div class="input-div">
-            <input type="text" placeholder="Name" name="name" [class.clicked-input]="clickedInputs[0]" (click)="onInputClick(0)"
-                (blur)="onInputBlur(0)" (input)="onInputChange($event, 0)" (focus)="onInputFocus(0)">
-            <img *ngIf="clickedInputs[0] || showCheckImage[0]" [src]="checkImageSource(0)" alt="Check Image" class="check-image">
+            <input #nameField type="text" placeholder="Name" name="name" [class.clicked-input]="clickedInputs[0]"
+                (click)="onInputClick(0)" (blur)="onInputBlur(0)" (input)="onInputChange($event, 0)"
+                (focus)="onInputFocus(0)">
+            <img *ngIf="clickedInputs[0] || showCheckImage[0]" [src]="checkImageSource(0)" alt="Check Image"
+                class="check-image">
+            <span class="warning-txt" *ngIf="showMissingImage[0]">This field is requiered. Please fill in a name.</span>
         </div>
 
         <div class="input-div">
-            <input type="email" placeholder="Email" [class.clicked-input]="clickedInputs[1]" (click)="onInputClick(1)"
-                (blur)="onInputBlur(1) " (input)="onInputChange($event, 1)" (focus)="onInputFocus(1)">
+            <input #mailField type="email" placeholder="Email" [class.clicked-input]="clickedInputs[1]"
+                (click)="onInputClick(1)" (blur)="onInputBlur(1) " (input)="onInputChange($event, 1)"
+                (focus)="onInputFocus(1)">
             <img *ngIf="clickedInputs[1] || showCheckImage[1]" [src]="checkImageSource(1)" alt="Check Image"
                 class="check-image">
+            <span class="warning-txt" *ngIf="showMissingImage[1]">This field is requiered. Please fill in an
+                emailadress.</span>
         </div>
 
         <div class="input-div">
-            <textarea name="message" cols="30" rows="10" placeholder="Nachricht"
+            <textarea #messageField name="message" cols="30" rows="10" placeholder="Nachricht"
                 [class.clicked-input]="clickedInputs[2]" (click)="onInputClick(2)" (blur)="onInputBlur(2)"
                 (input)="onInputChange($event, 2)" (focus)="onInputFocus(2)"></textarea>
             <img *ngIf="clickedInputs[2] || showCheckImage[2]" [src]="checkImageSource(2)" alt="Check Image"
                 class="check-image">
+            <span class="warning-txt" *ngIf="showMissingImage[2]">This field is requiered. Please fill in a
+                message.</span>
         </div>
 
         <div class="policy">
-            <img src="assets/img/check-btn.png" alt="checkbox">
-            <span>Ich habe die <span class="policy-span">Datenschutzerklärung</span> gelesen und stimme den Bedingungen zu.</span>
+            <img [src]="policyAccept ? 'assets/img/accept.png' : 'assets/img/check-btn.png'" alt="checkbox"
+                (click)="checkPolicy()">
+            <span>Ich habe die <span class="policy-span">Datenschutzerklärung</span> gelesen und stimme den Bedingungen
+                zu.</span>
         </div>
-        <div [class.btn]="btnEnabled" class="disabled" (click)="btnEnabled && sendMessage()">Senden</div>
+        <button><div [class.btn]="btnEnabled" class="disabled" (click)="btnEnabled && sendMessage()">Senden</div></button>
     </form>
 
     <div class="subline">
@@ -47,9 +58,9 @@
         </div>
 
         <div class="footer-right">
-            <div class="arrow-up">
-                <img src="assets/img/arrow-up.png" alt="">
-            </div>
+            <a href="#atf" class="arrow-up">
+                <img src="assets/img/arrow-up.png" alt="to top">
+            </a>
             <div class="social-icons">
                 <img src="assets/img/Github button s3.png" alt="github">
                 <img src="assets/img/Email button s3.png" alt="email">

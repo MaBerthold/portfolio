@@ -87,6 +87,11 @@ textarea::placeholder {
     top: 28px;
 }
 
+.warning-txt {
+    color: red;
+    margin-left: 36px;
+}
+
 .policy {
     display: flex;
     justify-content: center;
@@ -96,6 +101,7 @@ textarea::placeholder {
 
 .policy img {
     &:hover {
+        height: 24px;
         background-color: #FF9900;
         border-radius: 50%;
         cursor: pointer;
@@ -112,6 +118,17 @@ textarea::placeholder {
     }
 }
 
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
 .disabled {
     font-family: 'Overpass', sans-serif;
     font-size: 23px;
@@ -122,12 +139,16 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
+
+
 
 .btn {
     color: white;
     border: solid 4px white;
     transition: padding 0.15s ease, font-weight 0.15s ease;
+    cursor: pointer;
 
     &:hover {
         cursor: pointer;
@@ -178,6 +199,11 @@ textarea::placeholder {
 
 .arrow-up {
     margin-bottom: 32px;
+
+    &:hover {
+        cursor: pointer;
+        animation: socialIconHover 500ms forwards;
+    }
 }
 
 .social-icons img {
