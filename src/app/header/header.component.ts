@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -8,6 +10,9 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   menuOpen = false;
 
+  constructor(private router: Router) {}
+
+
   openMenu() {
     this.animationBurgerMenu();
     console.log(this.menuOpen); 
@@ -15,6 +20,8 @@ export class HeaderComponent {
 
   animationBurgerMenu() {
     this.menuOpen = !this.menuOpen;
+    (this.menuOpen) ? this.router.navigate(['/menu']) : this.router.navigate(['/']);
   }
-
+  
+  
 }
