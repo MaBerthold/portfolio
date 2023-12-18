@@ -78,7 +78,7 @@ export class FooterComponent {
     fd.append('mailadress', mailField);
     fd.append('message', messageField.value);
 
-   await fetch('https://matthias-berthold.developerakademie.net/send_mail%20%281%29/send_mail/send_mail.php',
+   await fetch('http://matthias-berthold.de/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd

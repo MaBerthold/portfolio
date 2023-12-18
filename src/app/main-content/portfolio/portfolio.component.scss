@@ -193,6 +193,7 @@
 }
 
 .btn {
+    color: black;
     font-family: 'Overpass', sans-serif;
     font-size: 23px;
     border: solid 4px black;
@@ -214,4 +215,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a {
+        text-decoration: none;
+    }
 }
