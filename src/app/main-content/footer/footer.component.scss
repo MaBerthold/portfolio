@@ -28,6 +28,7 @@
 }
 
 .form {
+    position: relative;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -190,6 +191,10 @@ button {
     font-weight: 700;
 }
 
+.copyright {
+    margin-top: 24px;
+}
+
 .footer-right {
     display: flex;
     flex-direction: column;
@@ -230,9 +235,93 @@ button {
 
 .legal-notice {
     font-family: 'Overpass', sans-serif;
+    position: relative;
+    display: inline-block; 
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px; 
+        background-color: transparent;
+        transform-origin: bottom left;
+        transform: scaleX(1);
+        transition: transform 300ms ease-out;
+    }
+
+    &:hover::after {
+        background-color: #FF9900; 
+        transform-origin: bottom right;
+        transform: scaleX(0.5);
+    }
 
     &:hover {
         font-weight: 700;
         cursor: pointer;
     }
 }
+
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  .success {
+    position: absolute;
+    bottom: -80px;
+    border-radius: 4px;
+    background-color: #FF9900;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    animation: success 5s forwards;
+  }
+
+  @keyframes success {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+  }
+

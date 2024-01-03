@@ -40,10 +40,13 @@
         <div class="policy">
             <img [src]="policyAccept ? 'assets/img/accept.png' : 'assets/img/check-btn.png'" alt="checkbox"
                 (click)="checkPolicy()">
-            <span>Ich habe die <span class="policy-span">Datenschutzerklärung</span> gelesen und stimme den Bedingungen
+            <span>Ich habe die <span class="policy-span" routerLink="/policy">Datenschutzerklärung</span> gelesen und stimme den Bedingungen
                 zu.</span>
         </div>
         <button><div [class.btn]="btnEnabled" class="disabled" (click)="btnEnabled && sendMessage()">Senden</div></button>
+        <div *ngIf="sendingMessage" class="loader"></div>
+        <div *ngIf="success" class="success">Vielen Dank, die Nachricht wurde erfolgreich gesendet. Ich melde mich in kürze bei Ihnen.</div>
+
     </form>
 
     <div class="subline">
@@ -63,10 +66,10 @@
             </a>
             <div class="social-icons">
                 <a href="https://github.com/MaBerthold/" target="_blank"><img src="assets/img/Github button s3.png" alt="github"></a>
-                <img src="assets/img/Email button s3.png" alt="email">
-                <img src="assets/img/Linkedin button s3.png" alt="linkedIn">
+                <a href="mailto:matthiasberthold33@gmail.com"><img src="assets/img/Email button s3.png" alt="email"></a>
+                <a href="#"><img src="assets/img/Linkedin button s3.png" alt="linkedIn"></a>
             </div>
-            <span class="legal-notice">Legal notice</span>
+            <span class="legal-notice" routerLink="/legal">Legal notice</span>
         </div>
     </div>
 </div>

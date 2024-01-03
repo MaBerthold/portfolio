@@ -1,20 +1,29 @@
-.image-div1 {
+.main-div-arrow1 {
+  margin-right: 200px;
+  margin-left: 200px;
   position: relative;
-  width: 300px;
+  height: 300px;
 }
 
-.second-image, .third-image {
-    position: absolute;
-    top: 0;
-    opacity: 0;
+.first-image,
+.second-image,
+.third-image {
+  position: absolute;
+  right: 200px;
+  top: 0;
+}
+
+.second-image,
+.third-image {
+  opacity: 0;
 }
 
 .image-div1.start-animation .first-image {
   animation: fadeIn 100ms forwards;
 }
 
-.image-div1.start-animation .second-image { 
-  animation: fadeIn 100ms forwards; 
+.image-div1.start-animation .second-image {
+  animation: fadeIn 100ms forwards;
   animation-delay: 100ms;
 }
 
@@ -27,9 +36,12 @@
   0% {
     opacity: 0;
   }
-  5%, 99% {
+
+  5%,
+  99% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -39,7 +51,15 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+
+// Responsive Design
+
+@media(max-width: 1500px) {
+  .image-div1 {}
 }

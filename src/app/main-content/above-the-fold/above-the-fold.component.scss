@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Syne', sans-serif;
   font-size: 128px;
   font-weight: 800;
   margin-top: 204px;
@@ -122,5 +123,40 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+// Responsive Design
+
+@media(max-width: 1500px) {
+  .mail-and-scroll-line {
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+
+  .h1 {
+    font-size: 96px;
+  }
+
+  .my-name-headline {
+    font-size: 36px;
+  }
+
+  .seperator-headline {
+    width: 400px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .mail-and-scroll-line {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
+
+@media(max-width: 975px) {
+  .mail-and-scroll-line {
+    margin-right: 70px;
+    margin-left: 70px;
   }
 }

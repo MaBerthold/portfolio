@@ -17,4 +17,10 @@ export class HeaderComponent {
     this.menuOpen = !this.menuOpen;
     (this.menuOpen) ? this.router.navigate(['/menu']) : this.router.navigate(['/']);
   }  
+
+  toggleMenuBtn() {
+    if(this.menuOpen) {
+      this.menuOpen = false;
+    }
+  }
 }

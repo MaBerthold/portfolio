@@ -16,6 +16,9 @@ import { MenuComponent } from './menu/menu.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +34,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     ArrowSlider3Component,
     MenuComponent,
     MainContentComponent,
+    PrivacyPolicyComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

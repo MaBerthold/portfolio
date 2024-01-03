@@ -1,4 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +8,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
   @ViewChild('myForm') myForm: ElementRef;
   @ViewChild('nameField') nameField: ElementRef;
   @ViewChild('mailField') mailField: ElementRef;
@@ -15,7 +18,10 @@ export class FooterComponent {
   showCheckImage: boolean[] = [false, false, false];
   showMissingImage: boolean[] = [false, false, false];
   btnEnabled: boolean = false;
-  policyAccept = false;
+  policyAccept: boolean = false;
+  sendingMessage: boolean = false;
+  success: boolean = false;
+
 
 
   onInputClick(index: number): void {
@@ -69,24 +75,62 @@ export class FooterComponent {
     let mailField = this.mailField.nativeElement;
     let messageField = this.messageField.nativeElement;
 
+    this.sendingMessage = true;
+    this.disableFormField(nameField, mailField, messageField);
+    await this.submitFormData(nameField, mailField, messageField);
+    this.successSent(nameField, mailField, messageField);
+  }
+
+  disableFormField(nameField, mailField, messageField) {
     nameField.disabled = true;
     mailField.disabled = true;
     messageField.disabled = true;
+  }
 
+  enableFormField(nameField, mailField, messageField) {
+    nameField.disabled = false;
+    mailField.disabled = false;
+    messageField.disabled = false;
+  }
+
+  async submitFormData(nameField, mailField, messageField) {
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('mailadress', mailField);
     fd.append('message', messageField.value);
 
-   await fetch('http://matthias-berthold.de/send_mail/send_mail.php',
+    await fetch('https://matthias-berthold.de/send_mail/send_mail.php',
       {
         method: 'POST',
-        body: fd
+        body: fd,
+        mode: 'no-cors'
       }
     );
+  }
 
-    nameField.disabled = false;
-    mailField.disabled = false;
-    messageField.disabled = false;
+  successSent(nameField, mailField, messageField) {
+    this.btnEnabled = false;
+
+    setTimeout(() => {
+      this.success = true;
+      this.sendingMessage = false;
+      this.enableFormField(nameField, mailField, messageField);
+      this.clearFormFields();
+      setTimeout(() => {
+        this.success = false;
+      }, 5000);
+    }, 2000);
+  }
+
+  clearFormFields() {
+    this.nameField.nativeElement.value = '';
+    this.mailField.nativeElement.value = '';
+    this.messageField.nativeElement.value = '';
+    this.policyAccept = false;
+
+    this.showCheckImage = [false, false, false];
+    this.showMissingImage = [false, false, false];
   }
 }
+
+
