@@ -236,7 +236,7 @@ button {
 .legal-notice {
     font-family: 'Overpass', sans-serif;
     position: relative;
-    display: inline-block; 
+    display: inline-block;
 
     &::after {
         content: '';
@@ -244,7 +244,7 @@ button {
         bottom: 0;
         left: 0;
         right: 0;
-        height: 3px; 
+        height: 3px;
         background-color: transparent;
         transform-origin: bottom left;
         transform: scaleX(1);
@@ -252,7 +252,7 @@ button {
     }
 
     &:hover::after {
-        background-color: #FF9900; 
+        background-color: #FF9900;
         transform-origin: bottom right;
         transform: scaleX(0.5);
     }
@@ -268,10 +268,11 @@ button {
     height: 48px;
     display: inline-block;
     position: relative;
-  }
-  .loader::after,
-  .loader::before {
-    content: '';  
+}
+
+.loader::after,
+.loader::before {
+    content: '';
     box-sizing: border-box;
     width: 48px;
     height: 48px;
@@ -281,23 +282,25 @@ button {
     left: 0;
     top: 0;
     animation: animloader 2s linear infinite;
-  }
-  .loader::after {
-    animation-delay: 1s;
-  }
-  
-  @keyframes animloader {
-    0% {
-      transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0;
-    }
-  }
+}
 
-  .success {
+.loader::after {
+    animation-delay: 1s;
+}
+
+@keyframes animloader {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.success {
     position: absolute;
     bottom: -80px;
     border-radius: 4px;
@@ -309,9 +312,9 @@ button {
     align-items: center;
     padding: 16px;
     animation: success 5s forwards;
-  }
+}
 
-  @keyframes success {
+@keyframes success {
     0% {
         opacity: 0;
     }
@@ -323,5 +326,130 @@ button {
     100% {
         opacity: 0;
     }
-  }
+}
 
+//    Responsive Design
+
+@media(max-width: 1500px) {
+    .h2 {
+        margin-left: 150px;
+    }
+
+    .subline {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .h2 {
+        margin-left: 100px;
+    }
+
+    .subtitle-form {
+        text-wrap: wrap;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .subline {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+
+@media(max-width: 975px) {
+    .h2 {
+        margin-left: 70px;
+    }
+
+    .subtitle-form,
+    .subline,
+    .input-div {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .input-div {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 740px) {
+    .policy {
+        text-wrap: wrap;
+        text-align: center;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .send-btn {
+        margin: 32px;
+    }
+}
+
+@media(max-width: 580px) {
+    .h2 {
+        text-wrap: wrap;
+        font-size: 43px;
+    }
+
+    .form {
+        margin-top: 30px;
+    }
+
+    .subtitle-form,
+    .subline,
+    .input-div,
+    .policy,
+    .h2 {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .input-div {
+        width: 90%;
+    }
+
+    .arrow-up {
+        display: none;
+    }
+
+    .subline {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .footer-right,
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 64px;
+    }
+
+    .footer-left {
+        margin-top: 128px;
+    }
+
+    .social-icons {
+        position: absolute;
+        top: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-icons img {
+        padding-right: 32px;
+    }
+
+    .legal-notice {
+        margin-bottom: 32px;
+    }
+}

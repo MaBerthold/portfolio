@@ -43,7 +43,7 @@
             <span>Ich habe die <span class="policy-span" routerLink="/policy">Datenschutzerklärung</span> gelesen und stimme den Bedingungen
                 zu.</span>
         </div>
-        <button><div [class.btn]="btnEnabled" class="disabled" (click)="btnEnabled && sendMessage()">Senden</div></button>
+        <button><div [class.btn]="btnEnabled" class="disabled send-btn" (click)="btnEnabled && sendMessage()">Senden</div></button>
         <div *ngIf="sendingMessage" class="loader"></div>
         <div *ngIf="success" class="success">Vielen Dank, die Nachricht wurde erfolgreich gesendet. Ich melde mich in kürze bei Ihnen.</div>
 
