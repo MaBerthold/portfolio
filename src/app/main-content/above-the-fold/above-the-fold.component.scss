@@ -178,6 +178,7 @@
 @media(max-width: 870px) {
   .h1 {
     font-size: 80px;
+    margin-top: 150px;
   }
 
   .my-name-headline {
@@ -216,6 +217,12 @@
     width: 200px;
   }
 }
+@media(max-width: 580px) {
+  .mail-and-scroll-line {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
 
 @media(max-width: 520px) {
   .h1 {
@@ -236,7 +243,9 @@
     font-size: 40px;
   }
 
-  .my-name-headline {
+  .my-name-headline,
+  .email-90deg,
+  .scroll-down {
     font-size: 20px;
   }
 
