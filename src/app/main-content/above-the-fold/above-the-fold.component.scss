@@ -218,7 +218,8 @@
   }
 }
 @media(max-width: 580px) {
-  .mail-and-scroll-line {
+  .mail-and-scroll-line,
+  .h1 {
     margin-right: 30px;
     margin-left: 30px;
   }
@@ -240,13 +241,17 @@
 
 @media(max-width: 450px) {
   .h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .my-name-headline,
   .email-90deg,
   .scroll-down {
     font-size: 20px;
+  }
+
+  .scroll-arrow {
+    left: -37px;
   }
 
   .seperator-headline {

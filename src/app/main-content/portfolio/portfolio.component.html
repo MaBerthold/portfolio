@@ -5,7 +5,7 @@
             unbedingt empfohlen...</span>
     </div>
 
-    <div class="project-div" (mouseenter)="showDescriptionRight = true" (mouseleave)="showDescriptionRight = false">
+    <div class="project-div right-visible"  (scroll)="onScroll($event)">
         <div class="img-main-div">
             <img class="img-portfolio" src="assets/img/join-screen.png" alt="join screen">
             <div class="hidden-container left-frame right-circle">
@@ -32,7 +32,7 @@
 
     </div>
 
-    <div class="project-div" (mouseenter)="showDescriptionLeft = true" (mouseleave)="showDescriptionLeft = false">
+    <div class="project-div left-visible"  (scroll)="onScroll($event)">
         <span class="project-number">02/02</span>
 
         <div class="project-description-div-left" *ngIf="showDescriptionLeft">

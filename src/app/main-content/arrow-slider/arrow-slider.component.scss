@@ -61,5 +61,9 @@
 // Responsive Design
 
 @media(max-width: 1500px) {
-  .image-div1 {}
+  .first-image,
+  .second-image,
+  .third-image {
+    right: -200px;
+  }
 }

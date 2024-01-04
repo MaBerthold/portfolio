@@ -453,3 +453,14 @@ button {
         margin-bottom: 32px;
     }
 }
+
+@media(max-width: 350px) {
+    .input-div {
+        margin: 0;
+    }
+
+    .social-icons img{
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
