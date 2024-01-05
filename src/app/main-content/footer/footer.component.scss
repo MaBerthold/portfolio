@@ -312,6 +312,8 @@ button {
     align-items: center;
     padding: 16px;
     animation: success 5s forwards;
+    text-wrap: wrap;
+    text-align: center;
 }
 
 @keyframes success {
@@ -319,7 +321,7 @@ button {
         opacity: 0;
     }
 
-    75% {
+    25%, 85% {
         opacity: 1;
     }
 
@@ -339,6 +341,12 @@ button {
         margin-left: 150px;
         margin-right: 150px;
     }
+
+    .success {
+        margin-left: 150px;
+        margin-right: 150px;
+        bottom: 0;
+    }
 }
 
 @media(max-width: 1100px) {
@@ -356,6 +364,12 @@ button {
     .subline {
         margin-left: 100px;
         margin-right: 100px;
+    }
+
+    .success {
+        margin-left: 150px;
+        margin-right: 150px;
+        bottom: 0;
     }
 }
 
@@ -383,12 +397,24 @@ button {
     }
 }
 
+@media(max-width: 840px) {
+    .success {
+        margin-left: 70px;
+        margin-right: 70px;
+        bottom: 0;
+    }
+}
+
 @media(max-width: 740px) {
     .policy {
         text-wrap: wrap;
         text-align: center;
         margin-left: 70px;
         margin-right: 70px;
+    }
+
+    .success {
+        bottom: 20px;
     }
 
     .send-btn {
@@ -404,6 +430,11 @@ button {
 
     .form {
         margin-top: 30px;
+    }
+
+    .success {
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
     .subtitle-form,
@@ -458,6 +489,18 @@ button {
     }
 }
 
+@media(max-width: 450px) {
+    .success {
+       bottom: 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .success {
+       bottom: -20px;
+    }
+}
+
 @media(max-width: 350px) {
     .input-div {
         margin: 0;
@@ -467,4 +510,9 @@ button {
         padding-left: 28px;
         padding-right: 28px;
     }
+
+    .success {
+        bottom: -80px;
+        z-index: 100;
+     }
 }
