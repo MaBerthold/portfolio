@@ -1,47 +1,114 @@
 .image-div2 {
-    position: relative;
-    width: 300px;
-    margin-left: 200px;
+  margin-right: 200px;
+  margin-left: 200px;
+  position: relative;
+  height: 300px;
+}
+
+.first-image,
+.second-image,
+.third-image {
+  position: absolute;
+  left: 200px;
+  top: 0;
+}
+
+.second-image,
+.third-image {
+  opacity: 0;
+}
+
+.image-div2.start-animation .first-image {
+  animation: fadeIn 100ms forwards;
+}
+
+.image-div2.start-animation .second-image {
+  animation: fadeIn 100ms forwards;
+  animation-delay: 100ms;
+}
+
+.image-div2.start-animation .third-image {
+  animation: stay 1s forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .second-image, .third-image {
-      position: absolute;
-      top: 0;
-      opacity: 0;
+
+  5%,
+  99% {
+    opacity: 1;
   }
-  
-  .image-div2.start-animation .first-image {
-    animation: fadeIn 100ms forwards;
+
+  100% {
+    opacity: 0;
   }
-  
-  .image-div2.start-animation .second-image { 
-    animation: fadeIn 100ms forwards; 
-    animation-delay: 100ms;
+}
+
+@keyframes stay {
+  0% {
+    opacity: 1;
   }
-  
-  .image-div2.start-animation .third-image {
-    animation: stay 1s forwards;
-    animation-delay: 200ms;
+
+  100% {
+    opacity: 1;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    5%, 99% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+}
+
+// Responsive Design
+
+@media(min-width: 1275px) {
+  .mobile {
+    display: none;
   }
-  
-  @keyframes stay {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@media(max-width: 1500px) {
+
+  .first-image,
+  .second-image,
+  .third-image {
+    left: -200px;
   }
-  
+}
+
+@media(max-width: 1275px) {
+  .full {
+    display: none;
+  }
+}
+
+@media(max-width: 500px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    left: -160px;
+  }
+}
+
+@media(max-width: 450px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    left: -210px;
+  }
+}
+
+@media(max-width: 400px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    height: 250px;
+  }
+}
+
+@media(max-width: 350px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    height: 200px;
+    top: 70px;
+  }
+}

@@ -30,7 +30,6 @@
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
     font-size: 23px;
-    width: 525px;
 }
 
 .project-div {
@@ -39,47 +38,36 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
 
-    &:hover .hidden-container {
-        border: solid 4px black;
-    }
+.circle-arrow-left img {
+    transform: scale(1.5) rotate(135deg);
+    transition: transform 225ms ease;
+}
 
-    &:hover .circle {
-        background-color: black;
-        height: 80px;
-        width: 80px;
-        transition: height 225ms ease, width 225ms ease;
-    }
+.circle-arrow-right img {
+    transform: scale(1.5) rotate(-135deg);
+    transition: transform 225ms ease;
+}
 
-    &:hover .circle-arrow-left img {
-        transform: scale(1.5) rotate(135deg);
-        transition: transform 225ms ease;
-    }
+.circle-arrow-left {
+    left: -42px;
+    transition: left 225ms ease;
+}
 
-    &:hover .circle-arrow-right img {
-        transform: scale(1.5) rotate(-135deg);
-        transition: transform 225ms ease;
-    }
-
-    &:hover .circle-arrow-left {
-        left: -42px;
-        transition: left 225ms ease;
-    }
-
-    &:hover .circle-arrow-right {
-        right: -42px;
-        transition: right 225ms ease;
-    }
-
-    &:hover .img-main-div {
-        filter: none;
-    }
+.circle-arrow-right {
+    right: -42px;
+    transition: right 225ms ease;
 }
 
 .img-main-div {
     position: relative;
     filter: grayscale(100%);
     z-index: 5;
+}
+
+.color {
+    filter: none;
 }
 
 .img-portfolio {
@@ -93,7 +81,7 @@
     top: 20px;
     height: 380px;
     width: 550px;
-    border: solid 4px transparent;
+    border: solid 4px black;
 }
 
 .left-frame {
@@ -105,14 +93,15 @@
 }
 
 .circle {
-    background-color: transparent;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    animation: turnCircle 1s forwards;
+    transition: height 225ms ease, width 225ms ease;
 }
 
 .circle-arrow-right {
@@ -233,16 +222,16 @@
 @media(max-width: 1400px) {
     .project-div {
         margin-bottom: 500px;
+    }
 
-        &:hover .circle-arrow-left img {
-            transform: scale(1.5) rotate(405deg);
-            transition: transform 225ms ease;
-        }
+    .circle-arrow-left img {
+        transform: scale(1.5) rotate(405deg);
+        transition: transform 225ms ease;
+    }
 
-        &:hover .circle-arrow-right img {
-            transform: scale(1.5) rotate(-405deg);
-            transition: transform 225ms ease;
-        }
+    .circle-arrow-right img {
+        transform: scale(1.5) rotate(-405deg);
+        transition: transform 225ms ease;
     }
 
     .project-description-div-right {
@@ -300,11 +289,210 @@
         position: relative;
         bottom: -70px;
     }
+
+    .right-number {
+        right: 0;
+    }
+}
+
+@media(max-width: 800px) {
+    .h2 {
+        font-size: 64px;
+    }
+
+    .portfolio-headline {
+        text-wrap: wrap;
+    }
+}
+
+@media(max-width: 710px) {
+    .portfolio-introduction-txt {
+        font-size: 20px;
+    }
+
+    .img-portfolio,
+    .hidden-container {
+        height: 330px;
+        width: 470px;
+    }
+
+    .circle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .circle-arrow-right {
+        right: -33px;
+    }
+
+    .circle-arrow-right img {
+        transform: scale(1.1);
+    }
+
+    .circle-arrow-left img {
+        transform: scale(1.1);
+    }
+
+    .circle-arrow-left {
+        left: -33px;
+    }
+}
+
+@media(max-width: 615px) {
+
+    .h2 {
+        font-size: 56px;
+    }
+
+    .img-portfolio,
+    .hidden-container {
+        height: 280px;
+        width: 400px;
+    }
+
+    .circle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .circle-arrow-right {
+        right: -33px;
+    }
+
+    .circle-arrow-right img {
+        transform: scale(1.1);
+    }
+
+    .circle-arrow-left img {
+        transform: scale(1.1);
+    }
+
+    .circle-arrow-left {
+        left: -33px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .project-description-div-left {
+        bottom: -400px;
+        width: 400px;
+    }
+
+    .project-description-div-right {
+        width: 400px;
+    }
+
+    .project-description-headline {
+        font-size: 34px;
+    }
+
+    .btn {
+        width: 60px;
+        font-size: 20px;
+    }
+
+    .project-number {
+        font-size: 40px;
+    }
 }
 
 @media(max-width: 580px) {
     .portfolio-section {
         margin-right: 30px;
         margin-left: 30px;
+    }
+}
+
+@media(max-width: 540px) {
+    .h2 {
+        font-size: 45px;
+    }
+
+    .img-portfolio,
+    .hidden-container {
+        height: 250px;
+        width: 350px;
+    }
+
+    .project-description-div-left,
+    .project-description-div-right {
+        width: unset;
+
+    }
+}
+
+@media(max-width: 500px) {
+    .h2 {
+        font-size: 45px;
+    }
+
+    .img-portfolio,
+    .hidden-container {
+        height: 230px;
+        width: 320px;
+    }
+
+    .project-description-div-left {
+        bottom: -520px;
+    }
+
+    .buttons {
+        margin-top: 64px;
+    }
+}
+
+@media(max-width: 460px) {
+    .h2 {
+        font-size: 40px;
+    }
+
+    .img-portfolio,
+    .hidden-container {
+        height: 150px;
+        width: 230px;
+    }
+
+    .buttons {
+        align-items: center;
+    }
+
+    .project-number {
+        font-size: 32px;
+    }
+
+    .project-description-div-left {
+        bottom: -560px;
+    }
+}
+
+
+@media(max-width: 374px) {
+
+    .img-portfolio,
+    .hidden-container {
+        height: 150px;
+        width: 200px;
+    }
+
+    .project-description-div-left {
+        bottom: -620px;
+    }
+}
+
+@media(max-width: 340px) {
+
+    .img-portfolio,
+    .hidden-container {
+        height: 140px;
+        width: 180px;
+    }
+
+    .project-description-div-left {
+        bottom: -630px;
     }
 }

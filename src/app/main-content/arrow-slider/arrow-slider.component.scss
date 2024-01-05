@@ -61,9 +61,45 @@
 // Responsive Design
 
 @media(max-width: 1500px) {
+
   .first-image,
   .second-image,
   .third-image {
     right: -200px;
+  }
+}
+
+@media(max-width: 500px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    right: -180px;
+  }
+}
+
+@media(max-width: 450px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    right: -160px;
+  }
+}
+
+@media(max-width: 400px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    right: -130px;
+    height: 250px;
+  }
+}
+
+@media(max-width: 350px) {
+  .first-image,
+  .second-image,
+  .third-image {
+    height: 200px;
+    right: -100px;
+    top: 70px;
   }
 }

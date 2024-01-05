@@ -23,7 +23,7 @@ export class PortfolioComponent {
     const element = document.querySelector(selector);
     if (element) {
       const boundingClientRect = element.getBoundingClientRect();
-      const isVisible = boundingClientRect.top >= 0 && boundingClientRect.bottom <= window.innerHeight * 0.8;
+      const isVisible = boundingClientRect.top >= 0 && boundingClientRect.bottom <= window.innerHeight * 0.9;
       if (isVisible) {
         this[propertyName] = true;
       }    }

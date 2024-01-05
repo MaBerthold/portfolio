@@ -6,9 +6,9 @@
     </div>
 
     <div class="project-div right-visible"  (scroll)="onScroll($event)">
-        <div class="img-main-div">
+        <div class="img-main-div" [class.color]="showDescriptionRight" >
             <img class="img-portfolio" src="assets/img/join-screen.png" alt="join screen">
-            <div class="hidden-container left-frame right-circle">
+            <div class="hidden-container left-frame right-circle" *ngIf="showDescriptionRight">
                 <div class="circle-arrow-right circle"><img src="assets/img/animation-arrow-down.png" alt="arrow animation"></div>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
             </div>
         </div>
-        <span class="project-number">01/02</span>
+        <span class="project-number right-number">01/02</span>
 
     </div>
 
@@ -48,9 +48,9 @@
                 </div>
             </div>
         </div>
-        <div class="img-main-div" >
+        <div class="img-main-div" [class.color]="showDescriptionLeft" >
             <img class="img-portfolio" src="assets/img/el-pollo-loco1.jpg" alt="">
-            <div class="hidden-container right-frame">
+            <div class="hidden-container right-frame" *ngIf="showDescriptionLeft">
                 <div class="circle-arrow-left circle"><img src="assets/img/animation-arrow-down.png" alt="arrow animation"></div>
             </div>
         </div>
