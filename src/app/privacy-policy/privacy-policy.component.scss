@@ -3,3 +3,33 @@
     margin-left: 200px;
     margin-right: 200px;
 }
+
+// Responsive Design
+
+@media(max-width: 1500px) {
+    .main-div-policy {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .main-div-policy {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media(max-width: 975px) {
+    .main-div-policy {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+@media(max-width: 580px) {
+    .main-div-policy {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}

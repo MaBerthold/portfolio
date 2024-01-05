@@ -1,6 +1,7 @@
 .main-div {
     position: relative;
     overflow: hidden;
+    height: 100vh;
 }
 
 .menu {
@@ -52,10 +53,11 @@
     from {
         width: 100%;
     }
+
     to {
         margin-left: 50%;
         width: 50%;
-    }   
+    }
 }
 
 .container {
@@ -74,4 +76,79 @@
     height: 70%;
     background-color: black;
     clip-path: polygon(0 0, 70% 70%, 100% 100%, 0 100%);
+}
+
+// Responsive Design
+
+@media(max-width: 800px) {
+    .menu a {
+        font-size: 74px;
+    }
+
+    .menu img {
+        top: 40px;
+    }
+
+    .menu {
+        gap: 109px;
+    }
+}
+
+@media(max-width: 630px) {
+    .menu a {
+        font-size: 64px;
+    }
+
+    .menu img {
+        top: 30px;
+    }
+
+    .menu {
+        gap: 130px;
+    }
+}
+
+@media(max-width: 500px) {
+    .menu a {
+        font-size: 56px;
+    }
+
+    .menu img {
+        height: 40px;
+        left: -20px;
+    }
+
+    .seperator {
+        height: 3px;
+    }
+}
+
+@media(max-width: 430px) {
+    .menu a {
+        font-size: 48px;
+    }
+
+    .menu img {
+        top: 20px;
+    }
+
+    .menu {
+        margin-top: 168px;
+    }
+}
+
+@media(max-width: 400px) {
+    .menu a {
+        font-size: 36px;
+    }
+
+    .menu {
+        margin-top: 168px;
+    }
+
+    .menu img {
+        height: 30px;
+        top: 15px;
+        left: -15px;
+    }
 }
